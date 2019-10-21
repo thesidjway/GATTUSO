@@ -138,8 +138,9 @@ def gen_node(params, path_orig):
 	add_license(params, s)
 	s.write("#include <" + params.package_name + "/" + params.package_name + "_node.h>\n\n")
 	constdest(params, params.package_name + "_node", s)
-	s.write("void " + params.package_name + "_node::initCallbacks() {\n")
-	s.write("}\n\n")
+	if params.ros:
+		s.write("void " + params.package_name + "_node::initCallbacks() {\n")
+		s.write("}\n\n")
 	intmain(params, s)
 	os.chdir(pathinc)
 	i = open(params.package_name + "_node.h","w+")
@@ -206,7 +207,7 @@ def read_params(config_file):
 
 if __name__ == "__main__":
 	if len(sys.argv) is not 2:
-		print "Invalid syntax. Usage: python gattuso.py config.py"
+		print "Invalid syntax. Usage: python gattuso.py config.yaml"
 		exit()
 	params = read_params(sys.argv[1])
 	path = os.path.join(os.getcwd(), params.package_name)

@@ -5,7 +5,7 @@ pkg_version: "0.1.1"
 pkg_description: "Test Package"
 maintainer_email: "siddharthjha@outlook.com"
 maintainer_name: "Siddharth Jha"
-ros: True
+ros: False
 opencv: True
 gtsam: True
 ceres: True
