@@ -1,0 +1,19 @@
+package_name: "test_pkg"
+class_name: "TestPkg"
+lib_name: "TestPkg"
+pkg_version: "0.1.1"
+pkg_description: "Test Package"
+maintainer_email: "siddharthjha@outlook.com"
+maintainer_name: "Siddharth Jha"
+ros: True
+opencv: True
+gtsam: True
+ceres: True
+pcl: True
+eigen: True
+ros_pkgs: ["roscpp", "rospy", "std_msgs", "geometry_msgs", "nav_msgs"]
+cmake_minimum_req: "2.8.3"
+cpp_version: "11"
+year: "2019"
+package_name_full: "Test Package"
+node_object: "tpn"
